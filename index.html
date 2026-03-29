@@ -2,57 +2,65 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Oleksandr Zavoloka(77427) - Zadania</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania - Panel</title>
     <style>
-        /* Zmienione tło na nieco cieplejszy odcień szarości */
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            text-align: center; 
-            padding: 50px; 
-            background: #f4f7f6; 
-            color: #333;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #eef2f3; 
         }
 
         .box { 
-            display: inline-block; 
             background: white; 
             padding: 40px; 
-            border-radius: 15px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
-            border-top: 5px solid #28a745; /* Zielony akcent na górze */
+            border-radius: 20px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
         }
 
         h1 {
+            font-size: 24px;
+            color: #2d3436;
             margin-bottom: 30px;
-            color: #2c3e50;
+            letter-spacing: -0.5px;
         }
 
-        /* Nowy styl przycisków - odcienie zieleni */
         a { 
             display: block; 
-            margin: 15px 0; 
-            padding: 14px 30px; 
-            background: #28a745; 
+            margin-bottom: 15px; 
+            padding: 15px; 
+            background: linear-gradient(135deg, #2ecc71, #27ae60); 
             color: white; 
             text-decoration: none; 
-            border-radius: 8px; 
-            font-weight: 600;
-            transition: all 0.3s ease; /* Płynna zmiana koloru i skali */
+            border-radius: 12px; 
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(46, 204, 113, 0.2);
         }
 
-        /* Efekt po najechaniu - ciemniejszy zielony i lekkie uniesienie */
         a:hover { 
-            background: #218838; 
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transform: scale(1.03);
+            box-shadow: 0 6px 15px rgba(46, 204, 113, 0.4);
+            filter: brightness(1.05);
+        }
+
+        a:last-child {
+            margin-bottom: 0;
         }
     </style>
 </head>
 <body>
     <div class="box">
-        <h1>Moje Zadania</h1>
-        <a href="./zad1_cv/index.html">Zadanie 1 (HTML)</a>
-        <a href="./zad2_css/index.html">Zadanie 2 (CSS)</a>
-        </div>
+        <h1>Lista Zadań</h1>
+        <a href="./zad1_cv/index.html">Zadanie 1</a>
+        <a href="./zad2_css/index.html">Zadanie 2</a>
+    </div>
 </body>
 </html>
