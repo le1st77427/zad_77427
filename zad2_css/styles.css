@@ -1,0 +1,60 @@
+/* Kolor przewodni strony (zielony) */
+body {
+    font-family: Arial, sans-serif; /* zmiana czcionki */
+    background-color: #f0fff0; /* jasna zieleń */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Nagłówek */
+header {
+    background-color: #2e8b57; /* zielony */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Sekcje */
+section {
+    background-color: white;
+    margin: 20px; /* odstępy */
+    padding: 15px; /* wewnętrzne odstępy */
+    border-left: 5px solid #2e8b57; /* zielony element */
+}
+
+
+/* Nagłówki sekcji */
+h2 {
+    color: #2e8b57;
+}
+
+
+/* Linki */
+a {
+    color: #2e8b57;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Zdjęcie */
+img {
+    width: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+/* Stopka */
+footer {
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
