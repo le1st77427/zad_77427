@@ -22,7 +22,18 @@ function toggleProjects() {
 
     const projects = document.getElementById("projects");
 
-    if (projects.style.display === "none") {
+    function toggleProjects() {
+
+    const projects = document.getElementById("projects");
+
+    if (projects.style.display === "none" || projects.style.display === "") {
+        projects.style.display = "block";
+    } 
+    else {
+        projects.style.display = "none";
+    }
+
+} {
         projects.style.display = "block";
     } 
     else {
