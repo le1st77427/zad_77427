@@ -1,32 +1,20 @@
-// ================= THEME SWITCH =================
 
-function toggleTheme() {
+function ozChangeTheme() {
+    const ozLink = document.getElementById("ozThemeLink");
 
-    const body = document.body;
-
-    if (body.classList.contains("theme-green")) {
-        body.classList.remove("theme-green");
-        body.classList.add("theme-red");
-    } 
-    else {
-        body.classList.remove("theme-red");
-        body.classList.add("theme-green");
+    if (ozLink.getAttribute("href") === "green.css") {
+        ozLink.setAttribute("href", "red.css");
+    } else {
+        ozLink.setAttribute("href", "green.css");
     }
-
 }
 
+function ozToggleSection() {
+    const ozSection = document.getElementById("projekty");
 
-// ================= TOGGLE PROJECTS =================
-
-function toggleProjects() {
-
-    const projects = document.getElementById("projekty");
-
-    if (projects.style.display === "none") {
-        projects.style.display = "block";
-    } 
-    else {
-        projects.style.display = "none";
+    if (ozSection.style.display === "none") {
+        ozSection.style.display = "block";
+    } else {
+        ozSection.style.display = "none";
     }
-
 }
