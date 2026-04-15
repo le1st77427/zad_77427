@@ -1,99 +1,56 @@
 body {
-
-font-family: Arial, sans-serif;
-
-margin: 0;
-
-background: linear-gradient(
-135deg,
-#2b0000,
-#660000
-);
-
-color: white;
-
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #2b0000, #660000);
+    color: white;
 }
-
 
 .container {
-
-width: 90%;
-
-margin: 30px auto;
-
-background: #1a0000;
-
-padding: 20px;
-
-border-radius: 15px;
-
-box-shadow: 0 0 20px rgba(255,0,0,0.5);
-
+    width: 90%;
+    margin: 30px auto;
+    background: #1a0000;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,0,0,0.5);
 }
-
 
 header {
-
-text-align: center;
-
-padding: 20px;
-
-background: #990000;
-
-border-radius: 10px;
-
+    text-align: center;
+    padding: 20px;
+    background: #990000;
+    border-radius: 10px;
 }
 
-
-h1 {
-
-color: #ff4d4d;
-
-}
-
+h1 { color: #ff4d4d; }
 
 section {
-
-margin-top: 20px;
-
-padding: 15px;
-
-background: #330000;
-
-border-left: 6px solid red;
-
-border-radius: 10px;
-
+    margin-top: 20px;
+    padding: 15px;
+    background: #330000;
+    border-left: 6px solid red; /* Товста лінія зліва */
+    border-radius: 10px;
 }
 
-
-h2 {
-
-color: #ff6666;
-
-}
-
+h2 { color: #ff6666; }
 
 img {
-
-width: 140px;
-
-border-radius: 50%;
-
-border: 3px solid red;
-
+    width: 140px;
+    border-radius: 50%; /* Кругла форма */
+    border: 3px solid red; /* Червона рамка */
+    display: block;
+    margin: 15px auto;
 }
 
+ul { padding-left: 20px; }
+li { margin-bottom: 8px; }
 
-ul {
-
-padding-left: 20px;
-
+.buttons { text-align: center; margin: 20px 0; }
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #990000;
+    color: white;
+    border: 1px solid #ff4d4d;
+    border-radius: 10px;
 }
-
-
-li {
-
-margin-bottom: 8px;
-
-}
+footer { text-align: center; padding: 20px; opacity: 0.7; }
