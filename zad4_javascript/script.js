@@ -16,12 +16,11 @@ function toggleTheme() {
 }
 
 
-
 // ================= TOGGLE PROJECTS =================
 
 function toggleProjects() {
 
-    const projects = document.getElementById("projects");
+    const projects = document.getElementById("projekty");
 
     if (projects.style.display === "none") {
         projects.style.display = "block";
