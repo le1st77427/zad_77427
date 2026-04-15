@@ -13,9 +13,7 @@ body {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(255,0,0,0.5);
-    color: #ffffe0;
 }
-
 
 header {
     text-align: center;
@@ -24,7 +22,11 @@ header {
     border-radius: 10px;
 }
 
-h1 { color: #ff4d4d; }
+
+h1 { 
+    color: #ffffff; 
+}
+
 
 section {
     margin-top: 20px;
@@ -41,12 +43,11 @@ img {
     border-radius: 50%;
     border: 3px solid red;
     display: block;
-    margin: 15px 0;
+    margin: 15px auto;
 }
 
 ul { padding-left: 20px; }
 li { margin-bottom: 8px; }
-
 
 .buttons {
     text-align: center;
