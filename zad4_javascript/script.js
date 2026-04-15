@@ -1,4 +1,4 @@
-// CHANGE THEME
+// ZMIANA MOTYWU
 
 function toggleTheme() {
 
@@ -12,22 +12,21 @@ function toggleTheme() {
         body.classList.remove("theme-red");
         body.classList.add("theme-green");
     }
-
 }
 
 
 
-// TOGGLE PROJECTS SECTION
+// UKRYWANIE PROJEKTÓW
 
 function toggleProjects() {
 
-    const section = document.getElementById("projekty");
+    const projects = document.getElementById("projects");
 
-    if (section.style.display === "none") {
-        section.style.display = "block";
+    if (projects.style.display === "none") {
+        projects.style.display = "block";
     } 
     else {
-        section.style.display = "none";
+        projects.style.display = "none";
     }
 
 }
