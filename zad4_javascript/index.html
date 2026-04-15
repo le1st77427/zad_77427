@@ -15,40 +15,52 @@
     <h1>Moje CV</h1>
 </header>
 
-<!-- BUTTONY -->
-<div class="buttons">
-
-    <button onclick="toggleTheme()">Zmień motyw</button>
-    <button onclick="toggleProjects()">Pokaż / Ukryj Projekty</button>
-
-</div>
+<!-- КНОПКИ -->
+<button onclick="toggleTheme()">Zmień motyw</button>
+<button onclick="toggleProjects()">Projekty</button>
 
 <main>
 
-<section class="card">
+<section id="kontakt">
     <h2>Kontakt</h2>
     <p>Email: test@mail.com</p>
 </section>
 
-<section class="card">
-    <h2>Umiejętności</h2>
-    <p>HTML, CSS, JavaScript</p>
+
+<section id="o-mnie">
+    <h2>O mnie</h2>
+    <p>Student IT</p>
 </section>
 
-<!-- ONLY THIS SECTION WILL HIDE -->
-<section class="card" id="projects">
+
+<section id="umiejetnosci">
+    <h2>Umiejętności</h2>
+    <p>HTML, CSS, JS</p>
+</section>
+
+
+<section id="doswiadczenie">
+    <h2>Doświadczenie</h2>
+    <p>Web development</p>
+</section>
+
+
+<section id="edukacja">
+    <h2>Edukacja</h2>
+    <p>Vistula University</p>
+</section>
+
+
+<!-- ВАЖЛИВО -->
+<section id="projekty">
     <h2>Projekty</h2>
     <ul>
         <li>CV strona</li>
-        <li>Projekt JavaScript</li>
+        <li>GitHub Pages</li>
     </ul>
 </section>
 
 </main>
-
-<footer>
-    <p>© 2026 CV Project</p>
-</footer>
 
 <script src="script.js"></script>
 
