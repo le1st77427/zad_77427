@@ -1,4 +1,4 @@
-// ZMIANA MOTYWU
+// ================= THEME SWITCH =================
 
 function toggleTheme() {
 
@@ -12,28 +12,18 @@ function toggleTheme() {
         body.classList.remove("theme-red");
         body.classList.add("theme-green");
     }
+
 }
 
 
 
-// UKRYWANIE PROJEKTÓW
+// ================= TOGGLE PROJECTS =================
 
 function toggleProjects() {
 
     const projects = document.getElementById("projects");
 
-    function toggleProjects() {
-
-    const projects = document.getElementById("projects");
-
-    if (projects.style.display === "none" || projects.style.display === "") {
-        projects.style.display = "block";
-    } 
-    else {
-        projects.style.display = "none";
-    }
-
-} {
+    if (projects.style.display === "none") {
         projects.style.display = "block";
     } 
     else {
