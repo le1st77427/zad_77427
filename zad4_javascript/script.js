@@ -1,33 +1,33 @@
-// ZMIANA MOTYWU
+// CHANGE THEME
 
-function changeTheme() {
+function toggleTheme() {
 
     const body = document.body;
 
-    if (body.classList.contains("green-theme")) {
-        body.classList.remove("green-theme");
-        body.classList.add("red-theme");
+    if (body.classList.contains("theme-green")) {
+        body.classList.remove("theme-green");
+        body.classList.add("theme-red");
+    } 
+    else {
+        body.classList.remove("theme-red");
+        body.classList.add("theme-green");
     }
 
-    else {
-        body.classList.remove("red-theme");
-        body.classList.add("green-theme");
-    }
 }
 
 
 
-// UKRYWANIE SEKCJI PROJEKTY
+// TOGGLE PROJECTS SECTION
 
-function toggleSection() {
+function toggleProjects() {
 
     const section = document.getElementById("projekty");
 
     if (section.style.display === "none") {
         section.style.display = "block";
-    }
-
+    } 
     else {
         section.style.display = "none";
     }
+
 }
