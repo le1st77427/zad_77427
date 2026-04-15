@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -22,11 +21,9 @@ header {
     border-radius: 10px;
 }
 
-
 h1 { 
-    color: #ffffff; 
+    color: #ffff00; 
 }
-
 
 section {
     margin-top: 20px;
@@ -36,46 +33,25 @@ section {
     border-radius: 10px;
 }
 
-h2 { color: #ff6666; }
+h2 { 
+    color: #ff4d4d;
+}
 
 img {
     width: 140px;
-    border-radius: 50%;
+    border-radius: 50%; 
     border: 3px solid red;
     display: block;
     margin: 15px auto;
 }
 
-ul { padding-left: 20px; }
-li { margin-bottom: 8px; }
-
-.buttons {
-    text-align: center;
-    margin: 20px 0;
-}
-
+.buttons { text-align: center; margin: 20px 0; }
 button {
-    padding: 12px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
+    padding: 10px 20px;
     cursor: pointer;
     background: #990000;
     color: #ffffe0;
     border: 1px solid #ff4d4d;
-    transition: 0.3s;
+    border-radius: 10px;
 }
-
-button:hover {
-    background: #7a0000;
-    transform: scale(1.05);
-}
-
-footer {
-    text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-    opacity: 0.8;
-    color: #ffffe0;
-}
+footer { text-align: center; padding: 20px; opacity: 0.7; }
