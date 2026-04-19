@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oleksandr Zavoloka 77427 - CV</title>
+    <link id="themeLink" rel="stylesheet" href="green.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Oleksandr Zavoloka (ID: 77427)</h1>
+    </header>
+
+    <div class="buttons">
+        <button onclick="changeTheme()">
+            Zmień motyw (green/red)
+        </button>
+        <button onclick="toggleSection()">
+            Pokaż / Ukryj sekcję Projekty
+        </button>
+    </div>
+
+    <main>
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <p>E-mail: <a href="mailto:ozavolo1@stu.vistula.edu.pl">ozavolo1@stu.vistula.edu.pl</a></p>
+            <p>Telefon: <a href="tel:+48123456789">+48 123 456 789</a></p>
+            <p>Miasto: Warszawa</p>
+            <p>GitHub: <a href="https://github.com/le1st77427" target="_blank" rel="noopener noreferrer">le1st77427</a></p>
+        </section>
+
+        <section id="o-mnie">
+            <h2>O mnie</h2>
+            <p>
+                Jestem studentem zainteresowanym tworzeniem stron internetowych
+                oraz rozwojem w kierunku IT.
+                Lubię uczyć się nowych technologii
+                i rozwijać swoje umiejętności programistyczne.
+            </p>
+            <img src="photo.jpg" alt="Zdjęcie profilowe">
+        </section>
+
+        <section id="umiejetnosci">
+            <h2>Umiejętności</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript – podstawy</li>
+                <li>Git i GitHub</li>
+                <li>Tworzenie stron internetowych</li>
+            </ul>
+        </section>
+
+        <section id="doswiadczenie">
+            <h2>Doświadczenie</h2>
+            <article>
+                <h3>Obsługa sklepu internetowego</h3>
+                <p>Obsługa klientów, przyjmowania zamówień i kontaktu z klientami online.</p>
+            </article>
+        </section>
+
+        <section id="edukacja">
+            <h2>Edukacja</h2>
+            <p>Uczelnia Vistula – kierunek informatyczny. Planowane ukończenie: 2026</p>
+        </section>
+
+        <section id="projekty">
+            <h2>Projekty</h2>
+            <ul>
+                <li>Strona CV w HTML opublikowana w GitHub Pages</li>
+                <li>Prosta strona informacyjna z wykorzystaniem HTML</li>
+            </ul>
+        </section>
+
+        <section id="formularz">
+            <h2>Skontaktuj się ze mną</h2>
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="firstName">Imię</label>
+                    <input type="text" id="firstName" placeholder="Wpisz imię">
+                    <span class="error-text" id="firstNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Nazwisko</label>
+                    <input type="text" id="lastName" placeholder="Wpisz nazwisko">
+                    <span class="error-text" id="lastNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="example@mail.com">
+                    <span class="error-text" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Wiadomość</label>
+                    <textarea id="message" rows="4" placeholder="Twoja wiadomość..."></textarea>
+                    <span class="error-text" id="messageError"></span>
+                </div>
+
+                <button type="submit">Wyślij formularz</button>
+                <div id="formStatus"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Oleksandr Zavoloka (77427)</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
