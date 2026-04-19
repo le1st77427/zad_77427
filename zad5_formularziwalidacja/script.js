@@ -18,7 +18,6 @@ function toggleSection() {
     }
 }
 
-// Логика валидации формы
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
