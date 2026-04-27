@@ -1,0 +1,75 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #2b0000, #660000);
+    color: #ffffe0; 
+}
+
+.container {
+    width: 90%;
+    margin: 30px auto;
+    background: #1a0000;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,0,0,0.5);
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #990000;
+    border-radius: 10px;
+}
+
+h1 { color: #ffff00; }
+
+section {
+    margin-top: 20px;
+    padding: 15px;
+    background: #330000;
+    border-left: 6px solid red;
+    border-radius: 10px;
+}
+
+h2 { color: #ff4d4d; }
+
+img {
+    width: 140px;
+    border-radius: 50%; 
+    border: 3px solid red;
+    display: block;
+    margin: 15px auto;
+}
+
+.buttons { text-align: center; margin: 20px 0; }
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #990000;
+    color: #ffffe0;
+    border: 1px solid #ff4d4d;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+button:hover { background: #660000; transform: scale(1.05); }
+
+footer { text-align: center; padding: 20px; opacity: 0.7; }
+
+/* Formularz */
+.form-group { margin-bottom: 15px; }
+label { display: block; margin-bottom: 5px; font-weight: bold; color: #ff4d4d; }
+input, textarea {
+    width: 100%; padding: 10px; border: 1px solid #990000;
+    border-radius: 5px; background: #1a0000; color: #ffffe0;
+    font-family: inherit;
+}
+input:focus, textarea:focus { outline: none; border-color: #ffff00; }
+.error-text { color: #ff9999; font-size: 12px; display: block; min-height: 15px; margin-top: 5px;}
+
+.field-error { border: 2px solid #ff0000 !important; background-color: #4d0000; }
+.field-success { border: 2px solid #00ff00 !important; background-color: #1a3300; }
+
+#formStatus { text-align: center; margin-top: 15px; font-weight: bold; }
