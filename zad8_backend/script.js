@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
 
 
-                const backendURL = 'https://67cd270fdd7651e464ed4f4c.mockapi.io/messages';
+                const backendURL = 'https://6a00f29436fb6ad04de097f5.mockapi.io/message';
 
                 fetch(backendURL, {
                     method: 'POST',
