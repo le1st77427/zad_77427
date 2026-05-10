@@ -123,12 +123,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 statusDisplay.textContent = "Wysyłanie danych...";
                 statusDisplay.style.color = "yellow";
 
-                const formData = {
-    firstName: document.getElementById('firstName').value,
-    lastName: document.getElementById('lastName').value,
-    email: document.getElementById('email').value,
-    message: document.getElementById('message').value
-};
+                if (isFormValid) {
+                statusDisplay.textContent = "Wysyłanie danych...";
+                statusDisplay.style.color = "yellow";
+
+                const currentData = {
+                    firstName: nameField.value.trim(),
+                    lastName: surnameField.value.trim(),
+                    email: emailField.value.trim(),
+                    message: messageField.value.trim()
+                };
+
+                console.log("Wysyłam dokładnie to:", currentData);
+
+                const backendURL = 'https://67cd270fdd7651e464ed4f4c.mockapi.io/messages';
+
+                fetch(backendURL, {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json' 
+                    },
+                    body: JSON.stringify(currentData) 
+                })
 
 
                 const backendURL = 'https://6a00f29436fb6ad04de097f5.mockapi.io/message';
