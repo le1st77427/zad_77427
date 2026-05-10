@@ -15,7 +15,7 @@
 
     <div class="buttons">
         <button onclick="changeTheme()">
-            Zmień motyw (green/red)
+            Zmień motyw (zielony/czerwony)
         </button>
         <button onclick="toggleSection()">
             Pokaż / Ukryj sekcję Projekty
@@ -28,15 +28,15 @@
             <p>E-mail: <a href="mailto:ozavolo1@stu.vistula.edu.pl">ozavolo1@stu.vistula.edu.pl</a></p>
             <p>Telefon: <a href="tel:+48123456789">+48 123 456 789</a></p>
             <p>Miasto: Warszawa</p>
-            <p>GitHub: <a href="https://github.com/le1st77427" target="_blank">le1st77427</a></p>
+            <p>GitHub: <a href="https://github.com/le1st77427" target="_blank" rel="noopener noreferrer">le1st77427</a></p>
         </section>
 
         <section id="o-mnie">
             <h2>O mnie</h2>
             <p>
                 Jestem studentem zainteresowanym tworzeniem stron internetowych
-                oraz rozwojem w kierunku IT. Lubię uczyć się nowych technologii
-                i rozwijać swoje umiejętności programistyczne.
+                oraz rozwojem w kierunku IT. 
+                Lubię uczyć się nowych technologii i rozwijać swoje umiejętności programistyczne.
             </p>
             <img src="photo.jpg" alt="Zdjęcie profilowe">
         </section>
@@ -57,7 +57,7 @@
 
         <section id="edukacja">
             <h2>Edukacja</h2>
-            <p>Uczelnia Vistula – kierunek informatyczny</p>
+            <p>Akademia Finansów i Biznesu Vistula – kierunek Informatyka</p>
         </section>
 
         <section id="projekty">
@@ -67,37 +67,42 @@
         </section>
 
         <section id="notatki-sekcja">
-            <h2>Zadanie 7: Notatki (Local Storage)</h2>
+            <h2>Zadanie 7: Notatki</h2>
+            <p>Dodaj notatkę, która zostanie zapisana w przeglądarce (Local Storage).</p>
             <div class="note-input-container">
-                <input type="text" id="noteInput" placeholder="Wpisz notatkę...">
+                <input type="text" id="noteInput" placeholder="Wpisz treść notatki...">
                 <button onclick="addNote()" type="button">Dodaj</button>
             </div>
             <ul id="notesList" class="notes-list"></ul>
         </section>
 
         <section id="formularz">
-            <h2 id="backendHeading">Zadanie 8: Wyślij na сервер (Backend)</h2>
+            <h2>Zadanie 8: Wyślij na serwer (Backend)</h2>
             <form id="contactForm" novalidate>
                 <div class="form-group">
                     <label for="firstName">Imię</label>
                     <input type="text" id="firstName" placeholder="Wpisz imię">
                     <span class="error-text" id="firstNameError"></span>
                 </div>
+
                 <div class="form-group">
                     <label for="lastName">Nazwisko</label>
                     <input type="text" id="lastName" placeholder="Wpisz nazwisko">
                     <span class="error-text" id="lastNameError"></span>
                 </div>
+
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="example@mail.com">
+                    <input type="email" id="email" placeholder="przyklad@mail.com">
                     <span class="error-text" id="emailError"></span>
                 </div>
+
                 <div class="form-group">
                     <label for="message">Wiadomość</label>
                     <textarea id="message" rows="4" placeholder="Twoja wiadomość..."></textarea>
                     <span class="error-text" id="messageError"></span>
                 </div>
+
                 <button type="submit">Wyślij formularz</button>
                 <div id="formStatus"></div>
             </form>
