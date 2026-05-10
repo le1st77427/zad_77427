@@ -16,11 +16,18 @@ function toggleSection() {
 
 function loadData() {
     fetch('data.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) throw new Error('Błąd JSON');
+            return response.json();
+        })
         .then(data => {
             const skillsList = document.getElementById('skillsList');
             const projectsList = document.getElementById('projectsList');
             
+
+            if(skillsList) skillsList.innerHTML = '';
+            if(projectsList) projectsList.innerHTML = '';
+
             data.umiejetnosci.forEach(skill => {
                 let li = document.createElement('li');
                 li.textContent = skill;
@@ -33,13 +40,14 @@ function loadData() {
                 projectsList.appendChild(li);
             });
         })
-        .catch(error => console.error('Błąd JSON:', error));
+        .catch(error => console.error('Wystąpił problem:', error));
 }
 
 
 function loadNotes() {
     const notes = JSON.parse(localStorage.getItem('userNotes')) || [];
     const list = document.getElementById('notesList');
+    if(!list) return;
     list.innerHTML = '';
     notes.forEach((text, index) => {
         let li = document.createElement('li');
@@ -68,13 +76,11 @@ function deleteNote(index) {
     loadNotes();
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Przywracanie motywu
+
     const savedTheme = localStorage.getItem("savedTheme");
     if (savedTheme) document.getElementById("themeLink").setAttribute("href", savedTheme);
 
-    // 2. Ładowanie danych
     loadData();
     loadNotes();
 
@@ -110,13 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             validate(nameField, 'firstNameError', nameField.value.trim() !== "" && noDigitsRegex.test(nameField.value), "Wymagane, bez cyfr.");
             validate(surnameField, 'lastNameError', surnameField.value.trim() !== "" && noDigitsRegex.test(surnameField.value), "Wymagane, bez cyfr.");
-            validate(emailField, 'emailError', emailRegex.test(emailField.value.trim()), "Wprowadź poprawny e-mail.");
-            validate(messageField, 'messageError', messageField.value.trim() !== "", "Wiadomość nie może być pusta.");
-
+            validate(emailField, 'emailError', emailRegex.test(emailField.value.trim()), "Niepoprawny e-mail.");
+            validate(messageField, 'messageError', messageField.value.trim() !== "", "Wiadomość jest pusta.");
 
             if (isFormValid) {
-                statusDisplay.textContent = "Wysyłanie danych na serwer (POST)...";
-                statusDisplay.style.color = "yellow"; 
+                statusDisplay.textContent = "Wysyłanie danych...";
+                statusDisplay.style.color = "yellow";
 
                 const formData = {
                     firstName: nameField.value,
@@ -126,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
 
 
-                const backendURL = 'https://6a00f29436fb6ad04de097f5.mockapi.io/message';
+                const backendURL = 'https://67cd270fdd7651e464ed4f4c.mockapi.io/messages';
 
                 fetch(backendURL, {
                     method: 'POST',
@@ -138,16 +143,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         statusDisplay.textContent = "✅ Sukces! Wiadomość została zapisana w bazie danych (Backend).";
                         statusDisplay.style.color = "#66ff66";
                         contactForm.reset();
-                        // Resetowanie zielonych ramek
+
                         [nameField, surnameField, emailField, messageField].forEach(f => f.classList.remove('field-success'));
                     } else {
                         throw new Error("Błąd serwera");
                     }
                 })
                 .catch(error => {
-                    statusDisplay.textContent = "❌ Wystąpił błąd serwera. Spróbuj później.";
+                    statusDisplay.textContent = "❌ Wystąpił błąd podczas wysyłania.";
                     statusDisplay.style.color = "#ff6666";
-                    console.error('Błąd fetch:', error);
+                    console.error('Błąd Fetch POST:', error);
                 });
             } else {
                 statusDisplay.textContent = "❌ Popraw błędy w formularzu.";
