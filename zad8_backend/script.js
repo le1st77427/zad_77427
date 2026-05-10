@@ -124,11 +124,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 statusDisplay.style.color = "yellow";
 
                 const formData = {
-                    firstName: nameField.value,
-                    lastName: surnameField.value,
-                    email: emailField.value,
-                    message: messageField.value
-                };
+    firstName: document.getElementById('firstName').value,
+    lastName: document.getElementById('lastName').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value
+};
 
 
                 const backendURL = 'https://6a00f29436fb6ad04de097f5.mockapi.io/message';
