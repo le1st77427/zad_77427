@@ -1,0 +1,16 @@
+{
+    "umiejetnosci": [
+        "Programowanie w C# (.NET)",
+        "Zarządzanie bazami danych SQL Server",
+        "Tworzenie stron WWW (HTML5, CSS3, JavaScript)",
+        "Praca z danymi JSON oraz Fetch API",
+        "Wykorzystanie Local Storage w aplikacjach webowych"
+    ],
+    "projekty": [
+        "Symulator Automatu Vendingowego (C#)",
+        "Indywidualny Kalkulator w C#",
+        "Dynamiczne CV z systemem zmiany motywów",
+        "Aplikacja do notatek z zapisem w przeglądarce",
+        "Wysyłanie formularza na backend (Fetch POST)"
+    ]
+}
